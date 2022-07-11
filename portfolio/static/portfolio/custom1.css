@@ -1,0 +1,21 @@
+.navbar-nav .nav-link {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+#blogtitle {
+    font-size: 4rem;
+}
+
+@media (min-width: 992px) {
+    #hometext {
+        font-size: 3rem;
+    }
+    #blogdetailtitle {
+        font-size: 4rem;
+    }
+}

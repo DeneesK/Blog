@@ -1,0 +1,49 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'portfolio/custom1.css' %}">
+    <link rel="icon" href="{% static 'portfolio/favicon.ico'%}" type="image/x-icon">
+  </head>
+  <body>
+    <div class="container">
+    <nav id="topNav" class="navbar navbar-expand-md navbar-light">
+
+
+        <a class="navbar-brand col-md-3" href="{% url 'home' %}">
+          <img src="{% static 'portfolio/Logo.png' %}" width="30" height="30" class="d-inline-block align-top" alt="Denis's Logo">
+          <span>Denis Kalbasov</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse text-center col-md-2 offset-7 id='navbarNav' ">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="https://www.linkedin.com/in/denis-kalbasov-71107a244/">LinkedIn</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="https://github.com/DeneesK?tab=repositories">GitHub</a>
+            </li>
+            <li class="nav-item">
+              <a role="button" href="{% url 'blog:all_blogs' %}" class="btn btn-primary">Blog</a>
+            </li>
+        </div>
+      </div>
+    </nav>
+
+<div class="container">
+{% block content %}{% endblock %}
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
